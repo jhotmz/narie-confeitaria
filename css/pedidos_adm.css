@@ -1,0 +1,331 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f6f9;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+        .voltar{
+      width: 25px;
+      height: 25px;
+      gap: 5px;
+    }
+
+    /* Abas de status */
+    .status-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .status-tabs button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 20px;
+      background: #e0e0e0;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .status-tabs button:hover {
+      background: #d0d0d0;
+    }
+
+    .status-tabs button.active {
+      background: #9c5319;
+      color: #fff;
+    }
+
+    /* Cards */
+    .pedidos-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .pedido-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pedido-header {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .pedido-header h2 {
+      font-size: 18px;
+      color: #444;
+    }
+
+    .pedido-header i {
+      font-size: 20px;
+      color: #3498db;
+    }
+
+    .pedido-info {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    .itens-lista{
+      margin: 8px;
+    }
+
+    .pedido-info strong {
+      color: #222;
+    }
+
+    /* Status */
+    .pedido-status {
+      margin-bottom: 15px;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .status-pendente {
+      color: #e67e22;
+    }
+
+    .status-confirmado {
+      color: #2980b9;
+    }
+
+    .status-preparando {
+      color: #2980b9;
+    }
+
+    .status-saiu_para_entrega {
+      color: #8e44ad;
+    }
+
+    .status-entregue {
+      color: #27ae60;
+    }
+
+    .status-cancelado {
+      color: #c0392b;
+    }
+
+    .pedido-actions {
+      display: flex;
+      flex-wrap: wrap;
+      /* permite os botões quebrarem linha se não couberem */
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+
+    .pedido-actions button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      
+    }
+
+    .btn-detalhes {
+      background: #3498db;
+      color: #fff;
+    }
+
+    .btn-detalhes:hover {
+      background: #2980b9;
+    }
+
+    .btn-aprovar {
+      background: #2ecc71;
+      color: #fff;
+    }
+
+    .btn-aprovar:hover {
+      background: #27ae60;
+    }
+
+    .btn-rejeitar {
+      background: #e74c3c;
+      color: #fff;
+    }
+
+    .btn-rejeitar:hover {
+      background: #c0392b;
+    }
+
+    .status-tabs button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      background: #eee;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    .status-tabs button.active {
+      background: #9c5319;
+      /* cor de destaque */
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .btn-recarregar {
+      background-color: #4CAF50;
+      /* verde agradável */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-recarregar:hover {
+      background-color: #45a049;
+      /* verde mais escuro ao passar o mouse */
+      transform: translateY(-2px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-recarregar:active {
+      transform: translateY(0);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-pesquisa {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.pesquisa-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-pesquisa {
+  width: 220px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #333;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-pesquisa:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0,123,255,0.4);
+  outline: none;
+}
+
+.btn-pesquisar {
+  background: #007bff;
+  border: none;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-pesquisar:hover {
+  background: #0069d9;
+}
+
+
+
+@media (max-width: 600px) {
+  .pesquisa-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-pesquisa {
+    width: 100%;
+  }
+
+  .btn-pesquisar {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .status-tabs {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .pedidos-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .pedido-card {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .pedido-actions {
+        flex-direction: column;
+      }
+
+      .pedido-actions button {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .pedido-actions button {
+        flex: 1;
+        /* divide igualmente o espaço */
+      }
+    }

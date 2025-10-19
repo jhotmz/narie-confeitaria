@@ -1,0 +1,548 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Fonte do navbar nome */
+@font-face {
+  font-family: 'Tan Pearl';
+  src: url('../fonts/tan-pearl.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+body {
+  background-color: #f9f6f3;
+  color: #3a2a23;
+  line-height: 1.5;
+}
+
+a{
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Header */
+.header {
+  background: #4a2c2a;
+  padding: 1rem;
+}
+
+/* Nav principal */
+.navigation-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #4a2c2a;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+/* Logo nome*/
+.titulo-nav{
+  font-family: 'Tan Pearl', serif; /* aplica no site */
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+/* Ícones da direita */
+.info-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#btn-gerenciar{
+  margin: 1.4rem;
+  width: 38px;
+  color: #fefefe;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;   /* tamanho do botão */
+  height: 50px;
+  border-radius: 50%; /* deixa circular */
+  transition: 0.3s;
+}
+
+.icon-img {
+  width: 65px;   /* tamanho fixo, proporcional */
+  height: auto;  /* mantém proporção da sacola */
+}
+
+
+.icon-img.small {
+  width: 35;
+  height: 35;
+}
+
+.icon-img.icon-open{
+  width: 25px;
+  height: 25px;
+}
+
+/* Garante que o botão fica por cima do overlay */
+#button-menu {
+  position: relative;
+  z-index: 300;
+}
+
+/* Botão de fechar */
+/* Botão de fechar */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 210;
+}
+
+.close-button .close-img {
+  width: 24px;
+  /* ajuste conforme imagem */
+  height: 24px;
+}
+
+/* Esconde o ícone de fechar por padrão */
+.icon-close {
+  display: none;
+}
+
+/* Quando menu ativo: troca os ícones */
+.menu-wide.active~#button-menu .icon-open {
+  display: none;
+}
+
+.menu-wide.active~#button-menu .icon-close {
+  display: block;
+  width: 300px;
+}
+
+
+/* Overlay por trás do menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  /* não clica quando invisível */
+  transition: opacity 0.3s ease;
+  z-index: 150;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Menu lateral */
+.menu-wide {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 220px;
+  height: 100vh;
+  background: #5a3533;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 1rem;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.4);
+  transition: right 0.3s ease;
+  z-index: 200;
+}
+
+.menu-wide a {
+  display: block;
+  padding: 12px;
+  text-align: center;
+  background: #fff;
+  color: #4a2c2a;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.menu-wide a:hover {
+  background: #ffd9b3;
+  transform: scale(1.05);
+}
+
+.menu-wide.active {
+  right: 0;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav h1 {
+    font-size: 1.1rem;
+  }
+}
+
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.lista-produtos {
+  display: flex;
+  flex-direction: column; /* mobile: coluna */
+  gap: 10px; /* espaço entre os links */
+  margin: 20px;
+}
+
+/* estilo base dos links (mobile first) */
+.lista-produtos a {
+  display: block;
+  background-color: #fff;
+  color: #8B4513; /* marrom */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.lista-produtos a:hover {
+  background-color: #8B4513;
+  color: #fff;
+  transform: scale(1.05); /* efeito leve de zoom */
+}
+
+/* Versão desktop */
+@media (min-width: 768px) {
+  .lista-produtos {
+    flex-direction: row;
+    /* linha em telas maiores */
+    justify-content: space-around;
+  }
+
+  .lista-produtos a {
+    font-size: 18px;
+    /* um pouco maior em desktop */
+    padding: 14px 20px;
+  }
+}
+
+
+/* Header */
+.header {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  /* ocupa quase a tela toda */
+  background: url("../img/image_background.png") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Overlay escuro por cima da imagem */
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 10, 5, 0.6);
+  /* marrom escuro transparente */
+  z-index: 1;
+}
+
+/* Texto do header */
+.header p {
+  position: relative;
+  z-index: 2;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  padding: 0 1rem;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+/* Botão */
+.header .btn {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #8b4513;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 2s ease forwards;
+}
+
+.header .btn:hover {
+  background: #5c2c0c;
+  transform: scale(1.05);
+}
+
+/* Animação */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.btn, 
+.btnAdicionar {
+  background: #8b4513;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #5c2c0c;
+}
+
+
+
+/* Produtos */
+.produtos {
+  padding: 1rem;
+}
+
+.produtos h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.produto {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  /* Correção para alinhamento */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.produto img {
+  width: 100%;
+  border-radius: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.produto h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  min-height: 2.5em;
+  /* Garante altura fixa do título */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.produto p {
+  font-size: 0.9rem;
+  color: #6b4e3d;
+  margin-bottom: 0.6rem;
+}
+
+.produto .btn {
+  margin-top: auto;
+  /* empurra o botão para o final */
+}
+
+/* Rodapé */
+.footer {
+  background: #4a2c2a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+
+/* Footer Mobile */
+.mobile-footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #4a2c2a;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.mobile-footer p {
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  opacity: 0.8;
+}
+
+.mobile-footer nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mobile-footer nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+
+.mobile-footer nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+  /* Barra fixa no rodapé */
+#barraSacola {
+  position: fixed;
+  bottom: -100px; /* começa escondida */
+  left: 0;
+  width: 100%;
+  background-color: #8b4513;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
+  z-index: 999;
+  transition: bottom 0.3s ease;
+}
+
+#barraSacola span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#barraSacola a {
+  background-color: #5c2c0c;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#barraSacola a:hover {
+  background-color: #43210a;
+}
+
+
+
+@media (min-width: 1024px) {
+  .lista-produtos {
+    flex-direction: row; /* deixa em linha no desktop */
+    flex-wrap: wrap;     /* permite quebrar linha se necessário */
+    justify-content: center; /* centraliza os links */
+    gap: 20px;
+  }
+
+  .lista-produtos a {
+    font-size: 20px;  /* maior no desktop */
+    padding: 18px 25px; /* mais espaçamento */
+  }
+}
+
+
+/* Responsivo para telas maiores */
+@media (min-width: 768px) {
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,171 @@
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #5c2c0c;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #5c2c0c;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: grid;
+        gap: 15px;
+    }
+
+    label {
+        font-weight: bold;
+        color: #5c2c0c;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    input[type="file"] {
+        border: none;
+    }
+
+    button {
+        background-color: #8b4513;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    button:hover {
+        background-color: #5c2c0c;
+    }
+
+    .produtos {
+        margin-top: 30px;
+    }
+
+    .produto {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .produto img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 15px;
+    }
+
+    .produto-info {
+        flex: 1;
+    }
+
+    .produto-nome {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .produto-categoria {
+        font-size: 14px;
+        color: #777;
+    }
+
+    .produto-valor {
+        font-weight: bold;
+        color: #5c2c0c;
+    }
+
+    .card {
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-3px);
+    }
+
+    .card img {
+        object-fit: cover;
+        height: 180px;
+        width: 100%;
+    }
+
+    .btn {
+        flex: 1;
+        /* deixa os botões do mesmo tamanho */
+        min-width: 100px;
+    }
+
+    .voltar {
+        width: 25px;
+        height: 25px;
+        gap: 5px;
+     
+    }
+
+
+.nav-produto {
+  position: fixed;      /* fixa na tela */
+  top: 10px;            /* distância do topo */
+  left: 10px;           /* distância da esquerda */
+  z-index: 1000;        /* fica acima de outros elementos */
+}
+
+.nav-produto a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;          /* tamanho do botão */
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;   /* botão redondo */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.nav-produto a:hover {
+  transform: scale(0.8);
+  background-color: #f4e4d8; /* hover suave */
+}
+
+.nav-produto img.voltar {
+  width: 24px;
+  height: 24px;
+}
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }

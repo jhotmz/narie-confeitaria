@@ -1,0 +1,132 @@
+*{
+   font-family: Arial, sans-serif;
+} 
+
+ .resumo {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.resumo h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6a3b12;
+}
+
+.endereco {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fdf3ec;
+  border-radius: 8px;
+  border-left: 5px solid #9c5319;
+}
+
+.endereco h3 {
+  margin: 0 0 8px;
+  color: #9c5319;
+}
+
+.resumo table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.resumo th, .resumo td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.resumo tfoot td {
+  font-weight: bold;
+  color: #6a3b12;
+}
+
+.btn-confirmar {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #6a3b12, #9c5319);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-confirmar:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+.form-endereco {
+  margin-top: 10px;
+}
+
+.form-endereco label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.form-endereco input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.btn-salvar-endereco {
+  margin-top: 10px;
+  background-color: #198754;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-salvar-endereco:hover {
+  background-color: #157347;
+}
+.endereco {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.nav-voltar img{
+  width: 42px;
+  margin: 1.2rem;
+}
+
+.infoCliente {
+  background: #fdf3ec;          /* cor suave, combinando com o resumo */
+  border-left: 5px solid #9c5319; /* destaque na lateral */
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #6a3b12;
+}
+
+.infoCliente strong {
+  display: inline-block;
+  width: 100px; /* alinha os títulos */
+  font-weight: 600;
+}
+
+.infoCliente div {
+  margin-bottom: 6px;
+}

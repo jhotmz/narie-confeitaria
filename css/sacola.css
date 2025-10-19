@@ -1,0 +1,187 @@
+    body {
+      font-family: Arial, sans-serif;
+      background: #fbeff2;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+    }
+
+    nav img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .nav-produto {
+  position: fixed;      /* fixa na tela */
+  top: 20px;            /* distância do topo */
+  left: 20px;           /* distância da esquerda */
+  z-index: 1000;        /* fica acima de outros elementos */
+}
+
+.nav-produto a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;          /* tamanho do botão */
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;   /* botão redondo */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.nav-produto a:hover {
+  transform: scale(1.1);
+  background-color: #f4e4d8; /* hover suave */
+}
+
+.nav-produto img.voltar {
+  width: 24px;
+  height: 24px;
+}
+
+    .aviso{
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+    
+    }
+
+    .listaSacola {
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 0 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .titulo{
+        text-align: center;
+        font-size: 25px;
+        font-weight: 800;
+        
+    }
+
+    .listaSacola h1 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .listaSacola h3 {
+      font-size: 14px;
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .listaSacola input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      margin: 10px 0 20px;
+    }
+
+    .produtoSacola {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 10px;
+      border-radius: 16px;
+      margin-bottom: 15px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .produtoSacola img {
+      border-radius: 12px;
+    }
+
+    .infoProduto {
+      flex: 1;
+      margin-left: 12px;
+    }
+
+    .infoProduto h4 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .infoProduto p {
+      margin: 3px 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .acoes {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .acoes button {
+      border: none;
+      background: #DBB8A9;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      color: #8B4513;
+    }
+
+    .acoes span {
+      font-size: 15px;
+      margin: 0 5px;
+    }
+
+    .resumoValores {
+      margin: 20px 15px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .resumoValores h1 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+.botaoPagamento {
+  margin: 20px 15px 40px;
+  text-align: center;
+}
+
+.botaoPagamento button {
+  width: 100%;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: #8B4513;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.botaoPagamento button:hover {
+  background: #653C2A;
+}
+
+.linhaResumo {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 16px;
+  color: #444;
+}
+.envio{
+    display: flex;
+    justify-content: space-around;
+}

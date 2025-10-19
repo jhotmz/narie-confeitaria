@@ -1,0 +1,89 @@
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdf8f4; /* tom suave para combinar com confeitaria */
+      color: #333;
+    }
+
+    .nav-voltar img{
+      width: 42px;
+      margin: 1.2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #6a3b12;
+    }
+
+    .payment-options {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .option {
+      flex: 1;
+      min-width: 200px;
+      padding: 30px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .option:hover {
+      transform: translateY(-6px);
+      border: 2px solid #9c5319;
+      box-shadow: 0 5px 14px rgba(0,0,0,0.2);
+    }
+
+    .option h2 {
+      margin-bottom: 10px;
+      background: linear-gradient(to right, #6a3b12, #9c5319);
+      -webkit-text-fill-color: transparent;
+    }
+
+        /* estilo para destacar a opção selecionada */
+    .option.selected {
+      border: 2px solid #9c5319;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transform: scale(1.03);
+    }
+
+    .btn-continuar {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(to right, #6a3b12, #9c5319);
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-continuar:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+
+    @media (min-width: 768px) {
+    .nav-voltar img{
+      width: 20px;
+      margin: 1.2rem;
+    }
+    }
+
