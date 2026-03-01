@@ -20,8 +20,8 @@ curl_setopt_array($curl, array(
   "payment_method_id": "pix",
     "payer": {
   "email": "",
-  "first_name": "Helena",
-  "last_name": "Juliana",
+  "first_name": "",
+  "last_name": "",
   "identification": {
     "type": "CPF",
     "number": ""
