@@ -24,7 +24,7 @@ curl_setopt_array($curl, array(
   "last_name": "Juliana",
   "identification": {
     "type": "CPF",
-    "number": "06849985485"
+    "number": ""
   }
 }
 }',
