@@ -19,7 +19,7 @@ curl_setopt_array($curl, array(
   "external_reference": "MP0001",
   "payment_method_id": "pix",
     "payer": {
-  "email": "firewiid477@gmail.com",
+  "email": "",
   "first_name": "Helena",
   "last_name": "Juliana",
   "identification": {
